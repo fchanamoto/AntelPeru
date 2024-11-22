@@ -1,771 +1,465 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>NuevaVision - Internet para todos los peruanos</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Free HTML Templates" name="keywords">
-        <meta content="Free HTML Templates" name="description">
-    
-        <!-- Favicon -->
-        <link href="img/favicon.ico" rel="icon">
-    
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> 
-    
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    
-        <!-- Libraries Stylesheet -->
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-    
-        <style>
-            .fixed-header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 1000;
-                background-color: #fff;
-            }
-            .header-top {
-                padding: 5px 0;
-                background-color: #f8f9fa;
-                font-size: 0.9em;
-            }
-            .header-top a {
-                color: inherit;
-                text-decoration: none;
-            }
-            .header-top a:hover {
-                text-decoration: underline;
-            }
-            .header-top .fa-2x {
-                font-size: 1.5em;
-            }
-            .header-top h6 {
-                font-size: 0.9em;
-                margin-bottom: 0;
-            }
-            .header-top small {
-                font-size: 0.8em;
-            }
-            
-            .header-bottom {
-            padding: 5px 0;
-            box-shadow: 0 2px 5px rgba(243, 241, 241, 0.869);
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-            backdrop-filter: blur(8px);
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICOM - Expertos en Conectividad, Redes y Telecomunicaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #001529;
+            color: white;
         }
-            .floating-button {
-                position: fixed;
-                right: 20px;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                text-align: center;
-                line-height: 60px;
-                font-size: 30px;
-                color: #090909;
-                z-index: 1000;
+
+        .top-bar {
+            background-color: #408ed7;
+            border-bottom: 1px solid #0a2540;
+        }
+
+        .navbar {
+            background-color: #001529;
+            border-bottom: 1px solid #0a2540;
+            transition: all 0.3s ease;
+            padding: 1rem 0;
+        }
+
+        .navbar.sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 0.5rem 0;
+            background: linear-gradient(180deg, #1a4b8c 0%, #001529 100%);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body.has-sticky-nav {
+            padding-top: 76px;
+            /* Adjust this value based on your navbar height */
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white;
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover,
+        .navbar-dark .navbar-nav .nav-link:focus {
+            color: #3498db;
+        }
+
+        .btn-primary {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+
+        .btn-primary:hover {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #0a2540;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+
+        .footer {
+            background-color: #001529;
+            border-top: 1px solid #0a2540;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .social-icon:hover {
+            color: #3498db;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-button.whatsapp {
+            background-color: #25d366;
+            bottom: 90px;
+        }
+
+        .floating-button.facebook {
+            background-color: #3b5998;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:not(.btn):hover {
+            text-decoration: underline;
+        }
+
+        .hero-section {
+        
+            background-image:  url('Baner-bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            position: relative;
+            min-height: 600px;
+            height: 800px;
+            overflow: hidden;
+            /* Change from 'show' to 'hidden' */
+        }
+
+       
+
+        .hero-content {
+            
+            padding: 6rem;
+            max-width: 1200px;
+        }
+
+        .trayectoria-section {
+            background-color: #001529;
+            background-image: linear-gradient(rgba(0, 21, 41, 0.9), rgba(0, 21, 41, 0.9)), url('trayectoria-bg.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            /* Add a minimum height for scaling reference */
+        }
+
+        .trayectoria-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(26, 75, 140, 0.1) 0%, rgba(0, 21, 41, 0) 70%);
+        }
+
+        .big-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #4B96FF;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+
+        .stat-description {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: #4B96FF;
+            margin-bottom: 1rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 3px;
+            background-color: #4B96FF;
+            margin: 2rem auto;
+        }
+
+        .trayectoria-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        @media (min-width: 1400px) {
+            .trayectoria-content {
+                max-width: 1320px;
             }
-            .whatsapp-button {
-                bottom: 90px;
-                background-color: #25d366;
+        }
+
+        @media (max-width: 1199px) {
+            .trayectoria-content {
+                max-width: 960px;
             }
-            .facebook-button {
-                bottom: 20px;
-                background-color: #3b5998;
+        }
+
+        @media (max-width: 991px) {
+            .trayectoria-content {
+                max-width: 720px;
             }
-            .navbar-light .navbar-nav .nav-link {
-                color: rgb(7, 7, 7);
-                
+        }
 
-                
+        @media (max-width: 767px) {
+            .trayectoria-content {
+                max-width: 540px;
             }
-            .navbar-light .navbar-nav .nav-link:hover,
-            .navbar-light .navbar-nav .nav-link:focus {
-                color: rgb(11, 11, 10);
-                box-shadow: 0 2px 5px rgba(128, 126, 126, 0.954);
+        }
+
+        @media (max-width: 768px) {
+            .big-number {
+                font-size: 2.5rem;
             }
-            .navbar-light .navbar-nav .active > .nav-link,
-            .navbar-light .navbar-nav .nav-link.active,
-            .navbar-light .navbar-nav .nav-link.show,
-            .navbar-light .navbar-nav .show > .nav-link {
-                color: #000000;
+
+            .stat-description {
+                font-size: 0.9rem;
             }
-        </style>
-    </head>
-    
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.navbar');
+            const body = document.body;
+            const navbarHeight = navbar.offsetHeight;
+            let isSticky = false;
 
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 100) { // Adjust this value to control when the navbar becomes sticky
+                    if (!isSticky) {
+                        navbar.classList.add('sticky');
+                        body.classList.add('has-sticky-nav');
+                        isSticky = true;
+                    }
+                } else {
+                    if (isSticky) {
+                        navbar.classList.remove('sticky');
+                        body.classList.remove('has-sticky-nav');
+                        isSticky = false;
+                    }
+                }
+            });
+        });
+    </script>
+</head>
 
-    <body>
-        <!-- Fixed Header Start -->
-        <header class="fixed-header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="d-flex justify-content-start">
-                                <div class="d-inline-flex align-items-center mr-3">
-                                    <i class="fa fa-map-marker-alt text-primary mr-2"></i>
-                                    <small>123 Street, New York, USA</small>
-                                </div>
-                                <div class="d-inline-flex align-items-center mr-3">
-                                    <i class="fa fa-envelope text-primary mr-2"></i>
-                                    <small><a href="mailto:info@example.com">info@example.com</a></small>
-                                </div>
-                                <div class="d-inline-flex align-items-center">
-                                    <i class="fa fa-phone text-primary mr-2"></i>
-                                    <small>+012 345 6789</small>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="d-flex justify-content-end align-items-center">
-                                <div class="d-inline-flex align-items-center mr-3">
-                                    <i class="far fa-clock text-primary mr-2"></i>
-                                    <small>9:00 am - 5:00 pm</small>
-                                </div>
-                                <a href="#" class="text-dark text-decoration-none">
-                                    <small>> Trabaja con nosotros</small>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div>
+                <a href="mailto:contacto@ficom.pe" class="text-white me-3"><i
+                        class="fas fa-envelope me-2"></i>contacto@ficom.pe</a>
+                <a href="tel:+51988769291" class="text-white"><i class="fas fa-phone me-2"></i>+51 9 8876 9291</a>
             </div>
-            <div class="header-bottom">
-                <div class="container">
-                    <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0">
-                        <a href="" class="navbar-brand">
-                            <h1 class="m-0"><spam class="text-primary">I</spam> nnovaTV</h1>
-                        </a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav py-0">
-                                <a href="index.html" class="nav-item nav-link active">  </a>
-                                <a href="about.html" class="nav-item nav-link">Trabajos</a>
-                                <a href="course.html" class="nav-item nav-link">Nosotros</a>
-                                <a href="teacher.html" class="nav-item nav-link">Cobertura</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documentación</a>
-                                    <div class="dropdown-menu rounded-0 m-0">
-                                        <a href="blog.html" class="dropdown-item">Brochure</a>
-                                        <a href="single.html" class="dropdown-item">Carta de Presentación</a>
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link">Contatanos</a>
-                            </div>
-                            <a class="btn btn-primary py-2 px-4 ml-auto d-none d-lg-block" href="">Join Now</a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-    <!-- Carousel Start -->
-<div class="container-fluid p-0 pb-5 mb-5">
-    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#header-carousel" data-slide-to="1"></li>
-            <li data-target="#header-carousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="img/carousel-1.jpg" alt="Image" style="height: 750px; object-fit: cover;">
-                
-            </div>
-            <div class="carousel-item">
-                <img class="w-100" src="img/carousel-2.jpg" alt="Image" style="height: 750px; object-fit: cover;">
-                
-            </div>
-            <div class="carousel-item">
-                <img class="w-100" src="img/carousel-3.jpg" alt="Image" style="height: 750px; object-fit: cover;">
-                
+            <div>
+                <a href="#" class="text-white me-3">Trabaja con nosotros</a>
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </div>
 
-<!-- Carousel End -->
-
-<!-- Horizontal Card List Start -->
-
-    <div class="row no-gutters">
-        <div class="col-12 col-sm-6 col-md-3 p-0">
-            <div class="card rounded-0 h-100">
-                <img src="/placeholder.svg?height=113&width=113" class="card-img-top rounded-0" alt="Card 1" style="height: 3cm; object-fit: cover;">
-                <div class="card-body p-2">
-                    <h5 class="card-title mb-0 text-center">INNOVACION</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3 p-0">
-            <div class="card rounded-0 h-100">
-                <img src="/placeholder.svg?height=113&width=113" class="card-img-top rounded-0" alt="Card 2" style="height: 3cm; object-fit: cover;">
-                <div class="card-body p-2">
-                    <h5 class="card-title mb-0 text-center">CALIDAD</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3 p-0">
-            <div class="card rounded-0 h-100">
-                <img src="/placeholder.svg?height=113&width=113" class="card-img-top rounded-0" alt="Card 3" style="height: 3cm; object-fit: cover;">
-                <div class="card-body p-2">
-                    <h5 class="card-title mb-0 text-center">COMPROMISO</h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-6 col-md-3 p-0">
-            <div class="card rounded-0 h-100">
-                <img src="/placeholder.svg?height=113&width=113" class="card-img-top rounded-0" alt="Card 4" style="height: 3cm; object-fit: cover;">
-                <div class="card-body p-2">
-                    <h5 class="card-title mb-0 text-center">SEGURIDAD</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Horizontal Card List End -->
-
-
-
-    <!-- Courses Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Residencial</h5>
-                <h1>Planes Economicos y dedicados</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-1.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-2.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-3.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                
-            </div>
-        </div>
-    </div>
-    <!-- Courses End -->
-
-    <!-- segunda categoria Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Empresarial</h5>
-                <h1>Infraestructura y empaquetado</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-1.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-2.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded overflow-hidden mb-2">
-                        <img class="img-fluid" src="img/course-3.jpg" alt="">
-                        <div class="bg-secondary p-4">
-                            <div class="d-flex justify-content-between mb-3">
-                                <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                                <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                            </div>
-                            <a class="h5" href="">Web design & development courses for beginner</a>
-                            <div class="border-top mt-4 pt-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                    <h5 class="m-0">$99</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-                
-            </div>
-        </div>
-    </div>
-    <!-- segunda categoria End -->
-
-    <!-- proyectos Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Nuestros Logros</h5>
-                <h1>EXPLORA NUESTROS PROYECTOS</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Ftth - GPON</h4>
-                            <span>Infraestructura residencial</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Capacitaciones</h4>
-                            <span>Calidad Tecnica</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">DEDICADO</h4>
-                            <span>Infraestructura Industrial</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-4.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Colaboraciones</h4>
-                            <span>socios estrategicos</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-5.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Marketing</h4>
-                            <span>Plataforma  para tu marca</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-6.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Sociales</h4>
-                            <span>Proyectos para la comunidad</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-7.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">Despliegue</h4>
-                            <span>Cableado estructurado</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="cat-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/cat-8.jpg" alt="">
-                        <a class="cat-overlay text-white text-decoration-none" href="">
-                            <h4 class="text-white font-weight-medium">WiFi-Satelital</h4>
-                            <span>Coneccion interprovincial</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- proyectos end -->
-
-
-    <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-7 mb-5 mb-lg-0">
-                    <div class="mb-4">
-                        <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Need Any Courses</h5>
-                        <h1 class="text-white">30% Off For New Students</h1>
-                    </div>
-                    <p class="text-white">Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos,
-                        ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-                        dolor</p>
-                    <ul class="list-inline text-white m-0">
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Labore eos amet dolor amet diam</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Etsea et sit dolor amet ipsum</li>
-                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Diam dolor diam elitripsum vero.</li>
-                    </ul>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card border-0">
-                        <div class="card-header bg-light text-center p-4">
-                            <h1 class="m-0">Sign Up Now</h1>
-                        </div>
-                        <div class="card-body rounded-bottom bg-primary p-5">
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control border-0 p-4" placeholder="Your name" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control border-0 p-4" placeholder="Your email" required="required" />
-                                </div>
-                                <div class="form-group">
-                                    <select class="custom-select border-0 px-4" style="height: 47px;">
-                                        <option selected>Select a course</option>
-                                        <option value="1">Course 1</option>
-                                        <option value="2">Course 1</option>
-                                        <option value="3">Course 1</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <button class="btn btn-dark btn-block border-0 py-3" type="submit">Sign Up Now</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Registration End -->
-
-
-    <!-- Team Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Teachers</h5>
-                <h1>Meet Our Teachers</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
-                    <div class="team-item rounded overflow-hidden mb-2">
-                        <div class="team-img position-relative">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Jhon Doe</h5>
-                            <p class="m-0">Web Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
-                    <div class="team-item rounded overflow-hidden mb-2">
-                        <div class="team-img position-relative">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Jhon Doe</h5>
-                            <p class="m-0">Web Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
-                    <div class="team-item rounded overflow-hidden mb-2">
-                        <div class="team-img position-relative">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Jhon Doe</h5>
-                            <p class="m-0">Web Designer</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center team mb-4">
-                    <div class="team-item rounded overflow-hidden mb-2">
-                        <div class="team-img position-relative">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                            <div class="team-social">
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-outline-light btn-square mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="bg-secondary p-4">
-                            <h5>Jhon Doe</h5>
-                            <p class="m-0">Web Designer</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Testimonial</h5>
-                <h1>What Say Our Students</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-1.jpg" alt="">
-                            <h5 class="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-2.jpg" alt="">
-                            <h5 class="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-normal mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</h4>
-                            <img class="img-fluid mx-auto mb-3" src="img/testimonial-3.jpg" alt="">
-                            <h5 class="m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Blog Start -->
-    <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
-            <div class="text-center mb-5">
-                <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Blog</h5>
-                <h1>Latest From Our Blog</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                        <a class="blog-overlay text-decoration-none" href="">
-                            <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                            <p class="text-primary m-0">Jan 01, 2050</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                        <a class="blog-overlay text-decoration-none" href="">
-                            <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                            <p class="text-primary m-0">Jan 01, 2050</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                        <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                        <a class="blog-overlay text-decoration-none" href="">
-                            <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                            <p class="text-primary m-0">Jan 01, 2050</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Blog End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
-        <div class="row pt-5">
-            <div class="col-lg-7 col-md-12">
-                <div class="row">
-                    <div class="col-md-6 mb-5">
-                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Disfruta lo Nuevo</h5>
-                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
-                        <div class="d-flex justify-content-start mt-4">
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-light btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-5">
-                        <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Nuestros Planes</h5>
-                        <div class="d-flex flex-column justify-content-start">
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Residencial</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Empresarial</a>
-                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Coneccion satelital</a>
-                            
-                           
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-12 mb-5">
-                <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">OCTUBRE</h5>
-                <p>Por mes de la cancion criolla y Hallowin estamos lanzando nuevos planes</p>
-                <div class="w-100">
-                    <div class="input-group">
-                        <input type="text" class="form-control border-light" style="padding: 30px;" placeholder="Your Email Address">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary px-4">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-        <div class="row">
-            <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Domain Name</a>. All Rights Reserved. Designed by <a href="https://htmlcodex.com">HTML Codex</a>
-                </p>
-            </div>
-            <div class="col-lg-6 text-center text-md-right">
-                <ul class="nav d-inline-flex">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="https://via.placeholder.com/150x50" alt="50" class="mb-3"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                        <a class="nav-link active" href="#">INICIO</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                        <a class="nav-link" href="#">NOSOTROS</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            SOLUCIONES
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Conectividad</a></li>
+                            <li><a class="dropdown-item" href="#">Redes</a></li>
+                            <li><a class="dropdown-item" href="#">Seguridad</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                        <a class="nav-link" href="#">BLOG</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white py-0" href="#">Help</a>
+                        <a class="btn btn-primary" href="#">CONTACTO</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+    </nav>
 
-   <!-- Floating Buttons -->
-    <a href="https://wa.me/1234567890" target="_blank" class="floating-button whatsapp-button">
+    <section class="hero-section ">
+       
+
+        <div class="hero-content  py-9 position-absolute bottom-1 start-0 p-15 text-white">
+            <h1 class="display-4 mb-4">Expertos en Conectividad, Redes y Telecomunicaciones</h1>
+            <p class="lead mb-4">Soluciones innovadoras para empresas y eventos</p>
+            <a href="#" class="btn btn-primary btn-lg">Conoce nuestros servicios</a>
+        
+    </div>
+</section>
+
+
+
+    <!-- Hero Section -->
+   
+
+
+    <!-- Values Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb text-primary"></i>
+                    </div>
+                    <h3>INNOVACIÓN</h3>
+                    <p>Nos anticipamos a los desafíos del futuro</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake text-primary"></i>
+                    </div>
+                    <h3>COMPROMISO</h3>
+                    <p>Construimos conexiones a largo plazo</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-icon">
+                        <i class="fas fa-award text-primary"></i>
+                    </div>
+                    <h3>EXCELENCIA</h3>
+                    <p>Apoyo integral</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="value-icon">
+                        <i class="fas fa-check-circle text-primary"></i>
+                    </div>
+                    <h3>CALIDAD</h3>
+                    <p>Garantizamos nuestros servicios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add this CSS to your existing styles -->
+    <!-- Add this section after your Hero Section -->
+<section class="trayectoria-section">
+    <div class="trayectoria-content">
+        <h2 class="text-center text-white mb-5 display-4 fw-bold">NUESTRA TRAYECTORIA</h2>
+        
+        <!-- Top Row Stats -->
+        <div class="row text-center mb-5">
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="big-number">+200</div>
+                <div class="text-white stat-description">EMPRESAS<br>CONECTADAS</div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="big-number">+9.000km</div>
+                <div class="text-white stat-description">RED PROPIA<br>FIBRA ÓPTICA</div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="big-number">+10</div>
+                <div class="text-white stat-description">AÑOS DE<br>EXPERIENCIA</div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Bottom Row Features -->
+        <div class="row text-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="text-white stat-description">POSICIONAMIENTO DC<br>LATINOAMÉRICA</div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-icon">
+                    <i class="fas fa-signal"></i>
+                </div>
+                <div class="text-white stat-description">CONEXIÓN PROOVEEDORES DE<br>CONTENIDO/CDN</div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="https://via.placeholder.com/150x50" alt="50" class="mb-3">
+                    <p>Expertos en Conectividad, Redes y Telecomunicaciones.</p>
+                    <div>
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Datos de contacto</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Calle Mártir Olaya 129, Miraflores, Lima</p>
+                    <p><i class="fas fa-phone me-2"></i> +51 9 8876 9291</p>
+                    <p><i class="fas fa-envelope me-2"></i> contacto@ficom.pe</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5 class="mb-3">Empresa</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Inicio</a></li>
+                        <li><a href="#" class="text-white">Nosotros</a></li>
+                        <li><a href="#" class="text-white">Soluciones</a></li>
+                        <li><a href="#" class="text-white">Blog</a></li>
+                        <li><a href="#" class="text-white">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="mb-3">Soluciones</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Conectividad para empresas</a></li>
+                        <li><a href="#" class="text-white">Conectividad para eventos</a></li>
+                        <li><a href="#" class="text-white">Redes y Telecomunicaciones</a></li>
+                        <li><a href="#" class="text-white">Hotelería</a></li>
+                        <li><a href="#" class="text-white">Seguridad electrónica</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div class="py-3 text-center" style="background-color: #001529; border-top: 1px solid #0a2540;">
+        <p class="mb-0">&copy; FICOM 2024. Todos los derechos reservados.</p>
+    </div>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/51988769291" class="floating-button whatsapp" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="https://www.facebook.com/yourpage" target="_blank" class="floating-button facebook-button">
+    <a href="#" class="floating-button facebook">
         <i class="fab fa-facebook-f"></i>
     </a>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
 
 </html>
